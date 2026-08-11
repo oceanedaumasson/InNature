@@ -1,0 +1,132 @@
+html,
+body{
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   margin: 0;
+}
+
+#title {
+    text-align: center;
+}
+
+button {
+    justify-self: center;
+    background-color: white;
+    transition-duration: 0.2s;
+    border: 1px;
+    padding: 15px 32px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+button:hover, button:focus {
+    background-color: #FF0700;
+    color: white;
+}
+
+.figureLabel {
+    cursor: pointer;
+}
+
+.figureText {
+    opacity: 0;
+    transition: opacity 0.2 ease;
+}
+
+.figureText.active {
+    opacity: 1;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
+
+.side-col {
+    flex: 1;
+    text-align: center;
+}
+
+.center-col {
+    flex-shrink: 0; 
+    text-align: center;
+    position: relative;
+    width: min(60vw, 650px);
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+}
+
+.center-col img, 
+.center-col canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.hoverTint {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.hoverTint.active {
+    opacity: 1;
+}
+
+input[type="range"]{
+  -webkit-appearance:none;
+  width:160px;
+  height:7px;
+  margin:10px 20px;
+  background: linear-gradient(to right, black 0%, black 100%);
+  background-size:150px 10px;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:20px;
+  height:20px;
+  background:#FF0700;
+  position:relative;
+  z-index:3;
+}
+
+
+/* IMAGE LAYERING */
+#imgbg
+{
+    z-index: 10;
+}
+
+#imgfig1
+{
+    z-index: 20;
+}
+
+#imgfig2
+{
+    z-index: 21;
+}
+
+#imgfig1Tint {
+    z-index: 30;
+}
+
+#imgfig2Tint {
+    z-index: 31;
+}
+
+#imgfig1Flowers { z-index: 40; }
+#imgfig2Flowers { z-index: 41; }

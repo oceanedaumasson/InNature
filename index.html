@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Things in Nature</title>
+<script src="javaScript.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="title">IN NATURE</h1>
+<div class="flex-container">
+    <div class="side-col left">
+        <h2>Pick a subject.</h2>
+        <button class="figureLabel" data-target="imgfig1Hover" data-text="imgSettings">Figure 1</button>
+        <button class="figureLabel" data-target="imgfig2Hover" data-text="imgSettings">Figure 2</button>
+    </div>
+
+    <div class="center-col">
+        <img id="imgbg" src="images/img1bg.png">
+        <canvas id="imgfig1" class="figImg"></canvas>
+        <canvas id="imgfig1Tint" class="figImg hoverTint"></canvas>
+         <canvas id="imgfig1Flowers" class="figImg"></canvas>
+
+        <canvas id="imgfig2" class="figImg"></canvas>
+        <canvas id="imgfig2Tint" class="figImg hoverTint"></canvas>
+            <canvas id="imgfig2Flowers" class="figImg"></canvas>
+
+    </div>
+
+    <div class="side-col right">
+        <div id="imgSettings" class="figureText">
+        <form oninput="pixelResult.value=pixelRange.value">
+            <label for="pixelRange">Pixel</label>
+            <input type="range" name="pixelRange" id="pixelRange" min="0" max="5" step="1" value="0" />
+        </form>
+        <form oninput="colorResult.value=colorRange.value">
+            <label for="colorRange">Color</label>
+            <input type="range" name="colorRange" id="colorRange" min="0" max="5" step="1" value="0" />
+        </form>
+        <form oninput="flowersResult.value=flowersRange.value">
+            <label for="flowersRange">Flowers</label>
+            <input type="range" name="flowersRange" id="flowersRange" min="0" max="5" step="1" value="0" />
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
